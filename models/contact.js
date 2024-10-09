@@ -6,4 +6,5 @@ const contactSchema = new mongoose.Schema({
   notes: { type: String, required: false, },
   memories: { type: String, required: false, },
   dateOfLastContact: { type: Date, required: true, },
+  association: { type: String, required: true, },
 });

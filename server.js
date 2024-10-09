@@ -8,6 +8,7 @@ const mongoose = require("mongoose");
 const methodOverride = require("method-override");
 const morgan = require("morgan");
 const session = require("express-session");
+const authRoutes = require('./controllers/auth');
 
 const port = process.env.PORT ? process.env.PORT : "3000";
 
@@ -32,12 +33,20 @@ app.use(
   })
 );
 
-//set view engine to EJS
+
+// Set view engine to EJS
 app.set('view engine', 'ejs');
+
+// Serve static files from the "public" directory directly
+app.use(express.static('public'));
+
+//Instructs express to use the routes in the authController
+
+app.use('/auth', authRoutes);
 
 // Route for landing page
 app.get('/', (req, res) => {
-  res.render('landing');
+  res.render('landing', { user: req.session.user });
 });
 
 app.listen(3000, () => {

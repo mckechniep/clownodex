@@ -3,38 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Manager App</title>
+    <title>Clownodex</title>
     <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body>
     <header>
         <h1>Welcome to the Clownodex</h1>
-        <p>We don't miss the circus, but we sure do miss the clowns.
-            <br>Now you can keep track of your clowns with ease!
-        </p>
-        <a href="/views/auth/register.ejs" class="cta-button">Get Started Now</a>
+        <p>We don't miss the circus, but we sure do miss the clowns.</p>
+        <% if (!user) { %>
+        <a href="/auth/register" class="cta-button">Register Here</a>
+        <a href="/auth/sign-in" class="cta-button">Sign In</a>
+        <% } else { %>
+            <p>Welcome, <%= user.username %>!</p>
+            <a href="/auth/sign-out" class="cta-button">Sign Out</a>
+        <% } %>
     </header>
 
-    <section id="features">
-        <h2>Features</h2>
+    <section id="stay-in-touch">
+        <h2>Stay in touch with the clowns from your life!</h2>
         <ul>
-            <li>Store contact information securely.</li>
-            <li>Access your contacts from any device.</li>
-            <li>Easy search and filter options.</li>
+            <li>An organized database helping you stay in touch with those who matter.</li>
+            <li>Don't let people fade out of your life! Key features to help you stay in contact regularly.</li>
+            <li>Add customizable notes and never forget what's going in their lives!</li>
         </ul>
     </section>
-
-    <section id="how-it-works">
-        <h2>How It Works</h2>
+      <!-- Insert the image from the local directory -->
+      <div class="img-container">
+      <img src="/images/clownsgroup.jpg" alt="Group of clowns" class="img-clowns">
+      </div>
+    <section id="simple-to-use">
+        <h2>Simple to Use</h2>
         <ol>
             <li>Create an account to get started.</li>
             <li>Add and manage contacts effortlessly.</li>
-            <li>Enjoy a clean and user-friendly interface.</li>
+            <li>Easy search and filter options.</li>
         </ol>
     </section>
 
     <footer>
-        <p>&copy; 2024 Contact Manager App</p>
+        <p>&copy; 2024 Clownodex</p>
     </footer>
 </body>
 </html>
