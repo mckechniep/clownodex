@@ -7,17 +7,14 @@
   <title>Your Contacts</title>
 </head>
 <body>
-    <%- include('./partials/_navbar.ejs') %>
+    <%- include('../partials/_navbar.ejs') %>
   <h1>Your Contacts</h1>
-  
+  <a href="/users/<%= user._id %>/contacts/new">Add a New Contact</a>
   <ul>
-    <% contacts.forEach( contact =>{ %>
-      <li>
-        <!-- Add a link around each contact, directing to the 'show' page -->
+    <% contacts.forEach(contact => { %>
         <a href="/users/<%= user._id %>/contacts/<%= contact._id %>">
-            <%= contact.name %>
+            <li><%= contact.firstName %> <%= contact.lastName %></li>
         </a>
-      </li>
     <% }) %>
   </ul>
 </body>

@@ -62,9 +62,9 @@ app.get('/', (req, res) => {
 //Instructs express to use the routes in the authController
 app.use('/auth', authRoutes);
 app.use(isSignedIn);
-app.use("users/:userId/contacts", contactsController);
+app.use("/users/:userId/contacts", contactsController);
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("Listening on port 3000");
 });
 
