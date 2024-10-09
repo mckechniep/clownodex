@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Contacts</title>
+</head>
+<body>
+    <%- include('./partials/_navbar.ejs') %>
+  <h1>Your Contacts</h1>
+  
+  <ul>
+    <% contacts.forEach( contact =>{ %>
+      <li>
+        <!-- Add a link around each contact, directing to the 'show' page -->
+        <a href="/users/<%= user._id %>/contacts/<%= contact._id %>">
+            <%= contact.name %>
+        </a>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>
