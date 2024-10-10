@@ -24,7 +24,7 @@ So I came up with the Clownodex to help me.
 
 The name is a play on the word "Rolodex" (which is a device used to store and organize business cards), and "clowns" being a nod to a friend and fellow soldier I served with, who replied "I miss the clowns but not the circus" when asked whether he missed the Army. 
 
-## [Clownodex](https://clownodex-6d4241323c6d.herokuapp.com/)
+## Try it out here: [Clownodex](https://clownodex-6d4241323c6d.herokuapp.com/)
 
 # Web Layout
 
