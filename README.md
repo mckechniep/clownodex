@@ -1,5 +1,7 @@
 # Clownodex
 
+A web application designed with JavaScript, HTML, CSS
+
 Everyone wants to live a happy life. For many of us, our happiness is the most important measure of our lives.  
 
 In an effort to determine exactly what the predictors are of a happy life, Harvard University conducted one of the world's longest and most thorough studies.
@@ -24,3 +26,14 @@ The name is a play on the word "Rolodex" (which is a device used to store and or
 
 ## Wireframe
 
+![Wireframe Landing Page](https://github.com/user-attachments/assets/138d0690-bbb6-4054-bbf7-526451c1bccf)
+
+![sign in page](https://github.com/user-attachments/assets/431278ba-106b-4132-b975-432c66f5575b)
+
+![register account page](https://github.com/user-attachments/assets/c163270e-f889-4d46-8440-ce06c58a74ee)
+
+![HomePage (contacts)](https://github.com/user-attachments/assets/b83be0be-98df-45e2-94ce-f55b4ee7b9d2)
+
+![Add Contact](https://github.com/user-attachments/assets/f02e68f2-3cec-492c-8dfd-541db9d6d14d)
+
+![Edit Contact](https://github.com/user-attachments/assets/ece98cc9-28ea-4647-a1ea-8c9951c31621)
