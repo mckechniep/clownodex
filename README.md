@@ -1,12 +1,12 @@
 # Clownodex
+ccor
+A web application designed with JavaScript, EJS, CSS and Node.js. Clownodex is a simple application designed to help us maintain those relationships most important to us.
 
-A web application designed with JavaScript, HTML, CSS
+I decided to create Clownodex after I learned the importance of personal relationships to an individuals happiness. 
 
-Everyone wants to live a happy life. For many of us, our happiness is the most important measure of our lives.  
+Harvard University spent 80 years researching the greatest factors determining a person's happiness. 
 
-In an effort to determine exactly what the predictors are of a happy life, Harvard University conducted one of the world's longest and most thorough studies.
-
- After 80 years of research, the answer was found to be simple:
+The answer was found to be simple:
 
 > **Having positive relationships with others is the key to a happy life.**
 
