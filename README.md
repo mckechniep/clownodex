@@ -1,10 +1,10 @@
 # Clownodex
-ccor
-A web application designed with JavaScript, EJS, CSS and Node.js. Clownodex is a simple application designed to help us maintain those relationships most important to us.
 
-I decided to create Clownodex after I learned the importance of personal relationships to an individuals happiness. 
+A web application designed with JavaScript, MongoDB, EJS, CSS and Node.js. Clownodex is a simple application designed to help us maintain those relationships most important to us.
 
-Harvard University spent 80 years researching the greatest factors determining a person's happiness. 
+I was inspired to create Clownodex after I learned the importance of personal relationships to an individuals happiness. 
+
+In one of the longest studies ever conducted, Harvard University spent 80 years researching the greatest factors determining a person's happiness. 
 
 The answer was found to be simple:
 
@@ -37,3 +37,8 @@ The name is a play on the word "Rolodex" (which is a device used to store and or
 ![Add Contact](https://github.com/user-attachments/assets/f02e68f2-3cec-492c-8dfd-541db9d6d14d)
 
 ![Edit Contact](https://github.com/user-attachments/assets/ece98cc9-28ea-4647-a1ea-8c9951c31621)
+
+
+## ERD Diagram
+
+<img width="1177" alt="ERD MEN Stack App" src="https://github.com/user-attachments/assets/d31a0187-c0b1-46b0-b0f5-c686af70e302">
