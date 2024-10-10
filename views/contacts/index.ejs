@@ -1,21 +1,23 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Contacts</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Contacts</title>
+    <link rel="stylesheet" href="/styles/main.css" />
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
-  <h1>Your Contacts</h1>
-  <a href="/users/<%= user._id %>/contacts/new">Add a New Contact</a>
-  <ul>
-    <% contacts.forEach(contact => { %>
-        <a href="/users/<%= user._id %>/contacts/<%= contact._id %>">
-            <li><%= contact.firstName %> <%= contact.lastName %></li>
-        </a>
-    <% }) %>
-  </ul>
+    <h1>Your Contacts</h1>
+    <div class="contact-list">
+        <% contacts.forEach(contact => { %>
+            <div class="contact-item">
+                <h2><%= contact.firstName %> <%= contact.lastName %></h2>
+                <p>Association: <%= contact.association %></p>
+                <a href="/users/<%= user._id %>/contacts/<%= contact._id %>" class="cta-button">View Details</a>
+            </div>
+        <% }) %>
+    </div>
+    <a href="/users/<%= user._id %>/contacts/new" class="cta-button">Add a New Contact</a>
 </body>
 </html>

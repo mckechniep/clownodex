@@ -5,9 +5,10 @@ const User = require("../models/user.js");
 //router logic
 //index route
 router.get("/", async (req, res) => {
-  try {
+//attempts to find the current user using ID stored in the session
+    try {
     const user = await User.findById(req.session.user._id);
-
+//if user is found, displays the user's contacts 
     res.render("contacts/index.ejs", { contacts: user.contacts });
   } catch (error) {
     console.log(error);
@@ -15,17 +16,19 @@ router.get("/", async (req, res) => {
   }
 });
 
-//new route
+//route handle for GET request to /new endpoint. Listens for GET requests to the /new path.
 router.get("/new", (req, res) => {
-  res.render("contacts/new.ejs");
+  //render the new.ejs template, HTML form for creating a new contact
+    res.render("contacts/new.ejs");
 });
 
+// router adding new contact to users list of contacts and then redirect to see all contacts
 router.post("/", async (req, res) => {
   try {
     // Look up the user from req.session
     const currentUser = await User.findById(req.session.user._id);
     // Push req.body (the new form data object) to the
-    // applications array of the current user
+    // contacts array of the current user
     currentUser.contacts.push(req.body);
     console.log(currentUser);
     // Save changes to the user
@@ -39,7 +42,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-//create route ? post?
+// Create route , could use post here?
 router.get("/", async (req, res) => {
   try {
     // Look up the user from req.session

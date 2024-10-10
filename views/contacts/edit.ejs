@@ -4,35 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Contact</title>
+    <link rel="stylesheet" href="/styles/main.css" />
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Edit Contact</h1>
     <form action="/users/<%= user._id %>/contacts/<%= contact._id %>?_method=PUT" method="POST">
-        <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" value="<%= contact.firstName %>" required>
-        
-        <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" name="lastName" value="<%= contact.lastName %>">
-        
-        <label for="notes">Notes:</label>
-        <textarea id="notes" name="notes"><%= contact.notes %></textarea>
-        
-        <label for="memories">Memories:</label>
-        <textarea id="memories" name="memories"><%= contact.memories %></textarea>
-        
-        <label for="dateOfLastContact">Date of Last Contact:</label>
-        <input type="date" id="dateOfLastContact" name="dateOfLastContact" value="<%= contact.dateOfLastContact.toISOString().split('T')[0] %>" required>
-        
-        <label for="association">Association:</label>
-        <select id="association" name="association" required>
-            <option value="UK" <%= contact.association === 'UK' ? 'selected' : '' %>>UK</option>
-            <option value="Family" <%= contact.association === 'Family' ? 'selected' : '' %>>Family</option>
-            <option value="Army" <%= contact.association === 'Army' ? 'selected' : '' %>>Army</option>
-            <option value="Arizona State" <%= contact.association === 'Arizona State' ? 'selected' : '' %>>Arizona State</option>
-            <option value="Boston" <%= contact.association === 'Boston' ? 'selected' : '' %>>Boston</option>
-        </select>
-        
+        <div class="form-row">
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" value="<%= contact.firstName %>" required>
+            </div>
+            <div class="form-group">   
+                <label for="lastName">Last Name:</label>
+                 <input type="text" id="lastName" name="lastName" value="<%= contact.lastName %>">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="dateOfLastContact">Date of Last Contact:</label>
+                <input type="date" id="dateOfLastContact" name="dateOfLastContact" value="<%= contact.dateOfLastContact.toISOString().split('T')[0] %>" required>
+            </div>
+            <div class="form-group">
+                <label for="association">Association:</label>
+                <select id="association" name="association" required>
+                    <option value="UK" <%= contact.association === 'UK' ? 'selected' : '' %>>UK</option>
+                    <option value="Family" <%= contact.association === 'Family' ? 'selected' : '' %>>Family</option>
+                    <option value="Army" <%= contact.association === 'Army' ? 'selected' : '' %>>Army</option>
+                    <option value="Arizona State" <%= contact.association === 'Arizona State' ? 'selected' : '' %>>Arizona State</option>
+                    <option value="Boston" <%= contact.association === 'Boston' ? 'selected' : '' %>>Boston</option>
+                </select>
+            </div>
+        </div>
+
+            <div class="form-group full-width">
+                <label for="notes">Notes:</label>
+                <textarea id="notes" name="notes"><%= contact.notes %></textarea>
+            </div>
+            <div class="form-group full-width">
+                <label for="memories">Memories:</label>
+                <textarea id="memories" name="memories"><%= contact.memories %></textarea>
+            </div>
+
         <button type="submit">Update Contact</button>
     </form>
 </body>

@@ -4,19 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Details</title>
+    <link rel="stylesheet" href="/styles/main.css" />
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1><%= contact.firstName %> <%= contact.lastName %></h1>
-    <p>Notes: <%= contact.notes %></p>
-    <p>Memories: <%= contact.memories %></p>
-    <p>Date of Last Contact: <%= contact.dateOfLastContact.toDateString() %></p>
-    <p>Association: <%= contact.association %></p>
-    
-    <a href="/users/<%= user._id %>/contacts/<%= contact._id %>/edit">Edit Contact</a>
-    
-    <form action="/users/<%= user._id %>/contacts/<%= contact._id %>?_method=DELETE" method="POST">
-        <button type="submit">Delete Contact</button>
-    </form>
+    <section class="contact-details">
+        <h1><%= contact.firstName %> <%= contact.lastName %></h1>
+        <div class="contact-info">
+            <p><strong>Notes:</strong> <%= contact.notes %></p>
+            <p><strong>Memories:</strong> <%= contact.memories %></p>
+            <p><strong>Date of Last Contact:</strong> <%= contact.dateOfLastContact.toDateString() %></p>
+            <p><strong>Association:</strong> <%= contact.association %></p>
+        </div>
+        <div class="contact-actions">
+            <a href="/users/<%= user._id %>/contacts/<%= contact._id %>/edit" class="cta-button">Edit Contact</a>
+            <form action="/users/<%= user._id %>/contacts/<%= contact._id %>?_method=DELETE" method="POST">
+                <button type="submit" class="cta-button">Delete Contact</button>
+            </form>
+        </div>
+    </section>
 </body>
 </html>

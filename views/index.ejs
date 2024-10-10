@@ -1,41 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clownodex</title>
-    <link rel="stylesheet" href="/styles/main.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
     <header>
-        <h1>Welcome to the Clownodex</h1>
-        <p>We don't miss the circus, but we sure do miss the clowns.</p>
-        <%- include('./partials/_navbar.ejs') %>
+      <h1>Welcome to the Clownodex</h1>
+      <p>We don't miss the circus, but we sure do miss the clowns.</p>
+      <%- include('./partials/_navbar.ejs') %>
     </header>
 
-    <section id="stay-in-touch">
+    <div class="img-container">
+      <img
+        src="/images/clownodexfinal.jpg"
+        alt="a contact card organizing device, also known as a 'rolodex,' with a clown face logo on it"
+        class="img-clowns"
+      />
+    </div>
+
+    <div class="flex-container">
+      <section id="stay-in-touch">
         <h2>Stay in touch with the clowns from your life!</h2>
         <ul>
-            <li>An organized database helping you stay in touch with those who matter.</li>
-            <li>Don't let people fade out of your life! Key features to help you stay in contact regularly.</li>
-            <li>Add customizable notes and never forget what's going in their lives!</li>
+          <li>
+            An organized database helping you stay in touch with those who
+            matter.
+          </li>
+          <li>
+            Don't let people fade out of your life! Key features to help you
+            stay in contact regularly.
+          </li>
+          <li>
+            Add customizable notes and never forget what's going in their lives!
+          </li>
         </ul>
-    </section>
-      <!-- Insert the image from the local directory -->
-      <div class="img-container">
-      <img src="/images/clownsgroup.jpg" alt="Group of clowns" class="img-clowns">
-      </div>
-    <section id="simple-to-use">
+      </section>
+
+      <section id="simple-to-use">
         <h2>Simple to Use</h2>
         <ol>
-            <li>Create an account to get started.</li>
-            <li>Add and manage contacts effortlessly.</li>
-            <li>Easy search and filter options.</li>
+          <li>Create an account to get started.</li>
+          <li>Add and manage contacts effortlessly.</li>
+          <li>Easy search and filter options.</li>
         </ol>
-    </section>
+      </section>
+    </div>
 
     <footer>
-        <p>&copy; 2024 Clownodex</p>
+      <p>&copy; 2024 Clownodex</p>
     </footer>
-</body>
+  </body>
 </html>

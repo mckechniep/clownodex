@@ -6,24 +6,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Add a New Contact</title>
+  <link rel="stylesheet" href="/styles/main.css" />
 </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Add a New Contact</h1>
-    <form action="/users/<%= user._id %>/contacts" method="POST">
-        <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" required>
-        <label for="dateOfLastContact">Date of Last Contact:</label>
-        <input type="date" id="dateOfLastContact" name="dateOfLastContact" required>
-        <label for="association">Association:</label>
-        <select id="association" name="association" required>
-            <option value="UK">UK</option>
-            <option value="Family">Family</option>
-            <option value="Army">Army</option>
-            <option value="Arizona State">Arizona State</option>
-            <option value="Boston">Boston</option>
-        </select>
-        <button type="submit">Add Contact</button>
+    <form action="/users/<%= user._id %>/contacts" method="POST" class="contact-form">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="dateOfLastContact">Date of Last Contact:</label>
+                <input type="date" id="dateOfLastContact" name="dateOfLastContact" required>
+            </div>
+            <div class="form-group">
+                <label for="association">Association:</label>
+                <select id="association" name="association" required>
+                    <option value="UK">UK</option>
+                    <option value="Family">Family</option>
+                    <option value="Army">Army</option>
+                    <option value="Arizona State">Arizona State</option>
+                    <option value="Boston">Boston</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group full-width">
+            <label for="notes">Notes:</label>
+            <textarea id="notes" name="notes"></textarea>
+        </div>
+        <div class="form-group full-width">
+            <label for="memories">Memories:</label>
+            <textarea id="memories" name="memories"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Add Contact</button>
     </form>
     </body>
 </html>
+
