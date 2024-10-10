@@ -24,7 +24,9 @@ So I came up with the Clownodex to help me.
 
 The name is a play on the word "Rolodex" (which is a device used to store and organize business cards), and "clowns" being a nod to a friend and fellow soldier I served with, who replied "I miss the clowns but not the circus" when asked whether he missed the Army. 
 
-## Wireframe
+## [Clownodex](https://clownodex-6d4241323c6d.herokuapp.com/)
+
+# Web Layout
 
 ![Wireframe Landing Page](https://github.com/user-attachments/assets/138d0690-bbb6-4054-bbf7-526451c1bccf)
 
@@ -39,6 +41,6 @@ The name is a play on the word "Rolodex" (which is a device used to store and or
 ![Edit Contact](https://github.com/user-attachments/assets/ece98cc9-28ea-4647-a1ea-8c9951c31621)
 
 
-## ERD Diagram
+# ERD Diagram https://clownodex-6d4241323c6d.herokuapp.com/
 
 <img width="1177" alt="ERD MEN Stack App" src="https://github.com/user-attachments/assets/d31a0187-c0b1-46b0-b0f5-c686af70e302">
