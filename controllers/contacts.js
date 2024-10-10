@@ -42,7 +42,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-// Create route , could use post here?
+// Create route , could I have used post here?
 router.get("/", async (req, res) => {
   try {
     // Look up the user from req.session
