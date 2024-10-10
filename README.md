@@ -26,6 +26,8 @@ The name is a play on the word "Rolodex" (which is a device used to store and or
 
 ## Try it out here: [Clownodex](https://clownodex-6d4241323c6d.herokuapp.com/)
 
+# [Trello Board](https://trello.com/invite/b/670059f4c2d921cb5f4efa5f/ATTI79dad2e93d58c3a18e0714c6e15689c958DEB06F/clownodex)
+
 # Web Layout
 
 ![Wireframe Landing Page](https://github.com/user-attachments/assets/138d0690-bbb6-4054-bbf7-526451c1bccf)
